@@ -1,0 +1,404 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.7;
+    font-family: 'Poppins', sans-serif;
+}
+
+input,
+textarea {
+   color: inherit;
+   font-family: inherit;
+   font-size: inherit;
+   border: 0;
+}
+
+button {
+    color: inherit;
+    border: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+}
+/* End Global Rules */
+
+
+
+/* Start Color Tints */
+:root {
+    --dark-txt: #666;
+    --light-txt: #ddd;
+    
+    --red-0: #ffe6e6;
+    --red-1: #ffcccc;
+    --red-2: #ffb3b3;
+    --red-3: #ff9999;
+    --red-4: #ff8080;
+    --red-5: #ff6666;
+    --red-6: #ff4d4d;
+    --red-7: #ff3333;
+    --red-8: #ff1919;
+    --red-9: #ff0000;
+    --red-10: #800000;
+
+    --orange-0: #fff2e6;
+    --orange-1: #ffe5cc;
+    --orange-2: #ffd9b3;
+
+/* End Color Tints */
+
+/* Start Box Shadows */
+    --sm-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 15%);
+    --md-shadow: 4px 4px 20px 0 rgba(0, 0, 0, 15%);
+    --lg-shadow: 5px 5px 30px 0 rgba(0, 0, 0, 15%);
+ /* inner shadow */
+    --inner-shadow: -1px -1px 2px 1px #e8e7e7 inset;
+/* bi-clr-shadow */
+    --bi-clr-shadow: -3px -3px 10px rgb(78, 179, 78), 3px 3px 10px rgb(86, 86, 128);
+/* End Box Shadows */
+
+/* Start Border Radius (from udacity) */
+    --rounded-border: 4px 100px;
+}
+
+
+                            /* GRID ORGANIZERS, CONTAINERS AND FONT SIZES */
+
+
+/*
+Grid bi-Organizer:
+one element per row in small and medium devices.
+2 elements per row for large screens (in media quiery: min-width: 992px..+)
+<< Use it for landing and similiar sections. >>
+*/
+.grid-bi-org {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    gap: 40px;
+}
+@media (min-width: 992px) {
+    .grid-bi-org {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+/*
+Grid tri-Organizer:
+one element per row in small devices.
+3 elements per row in medium and large screens (media quiery: min-width: 768px...++)
+<< may you can use it for page footer! >>
+*/
+.grid-tri-org {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+@media (min-width: 768px) {
+    .grid-tri-org {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 992px) {
+    .grid-tri-org {
+        gap: 40px;
+    }
+}
+
+
+
+
+/* Start Containers  */
+.container {
+    height: 100%;
+    width: 100vw;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+/* Medium */
+@media (min-width: 768px) {
+    .container {
+        width: 740px;
+    }
+}
+
+/* Large */
+@media (min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+/* X Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1140px;
+    }
+}
+
+/* XX Large */
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+/* End Containers  */
+
+
+
+/* Start Font Sizes */
+/* Extra Small, Mobile Devices */
+html {
+        font-size: 16px;
+    }
+body {
+        font-size: 18px;
+    }
+
+h1 {
+        font-size: 34px;
+    }
+
+h2 {
+        font-size: 26px;
+    }
+
+h3 {
+        font-size: 22.5px;
+    }
+
+h4 {
+        font-size: 21px;
+    }
+
+h5 {
+        font-size: 20px;
+    }
+
+h6 {
+        font-size: 19px;
+    }
+
+/* Small, IPads, Tablets */
+
+@media (min-width: 576px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 23px;
+    }
+
+    h6 {
+        font-size: 22px;
+    }
+}
+
+/* Meduim, Small Screens Laptops */
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 23px;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    h5 {
+        font-size: 27px;
+    }
+
+    h6 {
+        font-size: 26px;
+    }
+}
+
+/* Large Screens, Desctops */
+
+@media (min-width: 992) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 26px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 39px;
+    }
+
+    h3 {
+        font-size: 34px;
+    }
+
+    h4 {
+        font-size: 32px;
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    h6 {
+        font-size: 29px;
+    }
+}
+
+/* X Large Screens. TV */
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 36px;
+    }
+
+    h4 {
+        font-size: 34px;
+    }
+
+    h5 {
+        font-size: 33px;
+    }
+
+    h6 {
+        font-size: 32px;
+    }
+}
+
+/* XX Large Screens. TV */
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 16px;
+    }
+    body {
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 38px;
+    }
+
+    h4 {
+        font-size: 36px;
+    }
+
+    h5 {
+        font-size: 35px;
+    }
+
+    h6 {
+        font-size: 34px;
+    }
+}
+/* End Font Sizes */

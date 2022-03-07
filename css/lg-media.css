@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+    .page-header .menu-bar {
+        display: none;
+    }
+    .page-header nav {
+        position: static;
+        height: 100%;
+        display: block;
+    }
+    
+    .page-header ul {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: initial;
+        font-size: medium;
+        color: var(--main-clr);
+    }
+}
